@@ -7,7 +7,7 @@ const http = require("http");
 const socketio = require("socket.io");
 const server = http.createServer(app);
 app.use(cors());
-// app.use(express.static(path.join(__dirname+'/build')));
+app.use(express.static(path.join(__dirname+'/build')));
 const io = socketio(server);
 // app.get("/", (req, res) => {
 //   res.send("Server is up and running");
