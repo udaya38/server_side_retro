@@ -1,14 +1,13 @@
 {
-  "name": "Server",
+  "name": "api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "api.js",
   "engines": {
-    "node": "16.x"
+    "node": "14.x"
   },
   "scripts": {
-    "start": "node api.js",
-    "build": "./node_modules/.bin/netlify-lambda build src"
+    "start": "node api.js"
   },
   "keywords": [],
   "author": "",
@@ -16,8 +15,6 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.1",
-    "netlify-lambda": "^2.0.15",
-    "serverless-http": "^3.0.2",
     "socket.io": "^4.5.1"
   }
 }
