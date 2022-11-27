@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const router = express.Router();
-const serverless = require("serverless-http");
 const path=require('path');
 const http = require("http");
 const socketio = require("socket.io");
