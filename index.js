@@ -9,9 +9,9 @@ const server = http.createServer(app);
 app.use(cors());
 // app.use(express.static(path.join(__dirname+'/build')));
 const io = socketio(server);
-app.get("/", (req, res) => {
-  res.send("Server is up and running");
-});
+// app.get("/", (req, res) => {
+//   res.send("Server is up and running");
+// });
 app.get('/board',(req,res)=>{
   res.send({ description: "Its working!!"})
 })
@@ -53,7 +53,7 @@ server.listen(process.env.PORT || 3000,()=>{
   console.log("port is listening to 3000")
 });
 
-// app.get('*',(req,res)=>{
-//   res.sendFile(path.join(__dirname+'/build/index.html'));
-// })
+app.get('*',(req,res)=>{
+  res.sendFile(path.join(__dirname+'/build/index.html'));
+})
 //module.exports.handler = serverless(app);
